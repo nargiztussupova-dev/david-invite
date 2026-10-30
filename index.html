@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дэвид — 1 жас · шақыру</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1d2b5a;--card:#fffaf0;--ink:#2f2f45;--blue:#3f6fd8;--coral:#ff6b6b;--sun:#ffc93c;--teal:#2ec4b6;--pink:#ff8fb8;--mute:#7d7a90;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;min-height:100vh;color:var(--ink);font-family:'Nunito',system-ui,sans-serif;display:flex;justify-content:center;padding:22px 14px 40px;background:radial-gradient(circle at 20% 10%,#34479a,transparent 45%),radial-gradient(circle at 85% 90%,#5b3a8f,transparent 45%),var(--navy);overflow-x:hidden}
+.snow{position:fixed;inset:0;pointer-events:none;z-index:5}
+.snow i{position:absolute;top:-20px;color:#fff;font-style:normal;opacity:.85;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.snow{display:none}}
+.card{position:relative;z-index:2;width:100%;max-width:440px;background:var(--card);border-radius:30px;padding:0 24px 30px;text-align:center;box-shadow:0 14px 50px rgba(0,0,0,.35);overflow:hidden}
+.top{margin:0 -24px;height:84px;background:linear-gradient(180deg,#fff3d6,var(--card))}
+.top svg{width:100%;height:100%;display:block}
+.ru{display:block;font-size:.82em;font-weight:400;color:var(--mute);margin-top:2px}
+.small{letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--coral);font-weight:800;margin:6px 0 0}
+.small .ru{letter-spacing:.04em;text-transform:none;font-size:12px}
+h1{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:64px;line-height:1;margin:8px 0 0;background:linear-gradient(90deg,var(--blue),var(--pink),var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+.one{position:relative;width:170px;height:170px;margin:12px auto 6px;border-radius:50%;background:conic-gradient(var(--coral),var(--sun),var(--teal),var(--blue),var(--pink),var(--coral));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(63,111,216,.35)}
+.one div{width:142px;height:142px;border-radius:50%;background:var(--card);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1}
+.one b{font-family:'Playfair Display',Georgia,serif;font-size:62px;color:var(--coral)}
+.one span{font-weight:800;font-size:20px;color:var(--blue);margin-top:2px}
+.one small{font-size:12px;color:var(--mute);margin-top:2px}
+.one{position:relative}.one .badge{position:absolute;right:-6px;top:6px;width:44px;height:44px;border-radius:50%;background:var(--sun);color:var(--ink);font:600 26px 'Playfair Display',Georgia,serif;font-style:normal;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.25)}.cap{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:26px;color:var(--blue);margin:6px 0 0}.cap .ru{font-family:'Nunito',sans-serif;font-size:14px}.deco{font-size:26px;letter-spacing:.3em;margin:6px 0}
+.ny{display:inline-block;background:linear-gradient(90deg,var(--teal),var(--blue));color:#fff;border-radius:999px;padding:8px 16px;font-size:14px;font-weight:800;margin:6px 0 10px}
+.ny .ru{color:#fff;opacity:.85;font-size:12px}
+.lead{font-size:15px;line-height:1.5;margin:8px 2px}
+.lead .ru{margin-top:8px;font-size:13px}
+.info{margin:18px 0;display:grid;gap:10px;text-align:left}
+.row{background:#fff;border-radius:18px;padding:12px 16px;display:flex;gap:14px;align-items:center;border-left:6px solid var(--c)}
+.row i{font-style:normal;font-size:26px}
+.row b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.row b .ru{display:inline;text-transform:none;letter-spacing:0;font-size:11px}
+.row .v{font-size:17px;font-weight:800}
+.note{font-size:12px;color:var(--mute);margin:-4px 0 0;text-align:center}
+.rsvp{margin-top:22px;padding:18px 14px;border-radius:22px;background:linear-gradient(135deg,#e8f0ff,#ffeef5)}
+.rsvp h2{font-family:'Playfair Display',Georgia,serif;font-weight:600;font-size:25px;margin:0 0 4px}
+.rsvp h2 .ru{font-family:'Nunito',sans-serif;font-size:14px}
+.sub{font-size:13px}
+.btns{display:grid;gap:10px;margin-top:14px}
+button{font:inherit;font-weight:800;font-size:15px;border:0;border-radius:22px;padding:13px 14px;cursor:pointer;line-height:1.25}
+button .ru{color:inherit;opacity:.85;font-weight:400;font-size:12px}
+.yes{background:linear-gradient(90deg,var(--coral),var(--pink));color:#fff;box-shadow:0 6px 16px rgba(255,107,107,.4)}
+.no{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+#thanks{display:none;margin-top:14px;padding:14px;border-radius:16px;background:var(--teal);color:#fff;font-weight:800}
+#thanks .ru{color:#fff;opacity:.9}
+.foot{margin-top:22px;font-size:14px;font-weight:600}
+.trees{font-size:24px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="snow" id="snow" aria-hidden="true"></div>
+<main class="card">
+<div class="top">
+<svg viewBox="0 0 440 84" preserveAspectRatio="none" aria-hidden="true">
+<path d="M0 8 Q110 40 220 14 T440 8" fill="none" stroke="#2f2f45" stroke-width="2"/>
+<g>
+<polygon points="20,18 52,26 30,52" fill="#ff6b6b"/><polygon points="70,28 102,32 82,58" fill="#ffc93c"/>
+<polygon points="122,32 154,32 136,60" fill="#2ec4b6"/><polygon points="176,30 208,26 194,56" fill="#3f6fd8"/>
+<polygon points="232,24 264,26 252,54" fill="#ff8fb8"/><polygon points="284,22 316,28 304,56" fill="#ff6b6b"/>
+<polygon points="336,20 368,24 358,52" fill="#ffc93c"/><polygon points="388,14 420,20 414,48" fill="#2ec4b6"/>
+</g>
+<g fill="#ffc93c"><circle cx="40" cy="70" r="3"/><circle cx="120" cy="72" r="3"/><circle cx="220" cy="68" r="3"/><circle cx="330" cy="72" r="3"/><circle cx="410" cy="68" r="3"/></g>
+</svg>
+</div>
+
+<p class="small">Тойға шақырамыз<span class="ru">Приглашаем на праздник</span></p>
+<h1>Дэвид</h1>
+
+<div class="one"><div><svg viewBox="0 0 120 124" width="118" aria-label="Мишка"><ellipse cx="60" cy="114" rx="30" ry="18" fill="#b9773e"/><ellipse cx="60" cy="112" rx="16" ry="11" fill="#f3d3ae"/><circle cx="28" cy="54" r="12" fill="#b9773e"/><circle cx="28" cy="54" r="6" fill="#f3d3ae"/><circle cx="92" cy="54" r="12" fill="#b9773e"/><circle cx="92" cy="54" r="6" fill="#f3d3ae"/><circle cx="60" cy="70" r="34" fill="#c98a4b"/><ellipse cx="60" cy="82" rx="15" ry="11" fill="#f3d3ae"/><ellipse cx="60" cy="76" rx="5.5" ry="4" fill="#3b2a20"/><path d="M60 80v4M52 86q8 6 16 0" stroke="#3b2a20" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="47" cy="66" r="3.5" fill="#3b2a20"/><circle cx="73" cy="66" r="3.5" fill="#3b2a20"/><circle cx="40" cy="78" r="5" fill="#ff9aa8" opacity=".6"/><circle cx="80" cy="78" r="5" fill="#ff9aa8" opacity=".6"/><path d="M32 52Q60 44 88 52Q84 24 68 14Q46 26 32 52Z" fill="#e63946"/><rect x="30" y="48" width="60" height="9" rx="4.5" fill="#fff"/><circle cx="68" cy="13" r="6" fill="#fff"/><path d="M46 99l14 6-14 6zM74 99l-14 6 14 6z" fill="#3f6fd8"/><circle cx="60" cy="105" r="4" fill="#ffc93c"/></svg></div><em class="badge">1</em></div>
+<p class="cap">1 жас<span class="ru">1 годик</span></p>
+
+<div class="deco">🎈🎄🎁⭐❄️</div>
+
+<p class="lead">Дэвидтің алғашқы туған күні! Бұл қуанышты күнді ең жақындарымызбен бөліскіміз келеді.
+<span class="ru">Первый день рождения Дэвида! Будем рады разделить этот день с самыми близкими.</span></p>
+
+<div class="info">
+  <div class="row" style="--c:var(--coral)"><i>📅</i><div><b>Күні <span class="ru">· Дата</span></b><span class="v">17 желтоқсан<span class="ru">17 декабря</span></span></div></div>
+  <p class="note">Күні алдын ала, кейін нақтылаймыз<br>Дата предварительная, подтвердим дополнительно</p>
+  <div class="row" style="--c:var(--teal)"><i>🕒</i><div><b>Уақыты <span class="ru">· Время</span></b><span class="v">Жақында хабарлаймыз<span class="ru">Скоро сообщим</span></span></div></div>
+  <div class="row" style="--c:var(--blue)"><i>📍</i><div><b>Орны <span class="ru">· Место</span></b><span class="v">Жақында хабарлаймыз<span class="ru">Скоро сообщим</span></span></div></div>
+</div>
+
+<section class="rsvp">
+  <h2>Келесіздер ме?<span class="ru">Вы придёте?</span></h2>
+  <div class="btns">
+    <button class="yes" onclick="answer(true)">Иә, міндетті түрде келеміз 🎉<span class="ru">Да, обязательно придём</span></button>
+    <button class="no" onclick="answer(false)">Өкінішке қарай, келе алмаймыз<span class="ru">К сожалению, не сможем</span></button>
+  </div>
+  <div id="thanks"></div>
+</section>
+
+<div class="foot">Сүйіспеншілікпен, Константин мен Наргиз<span class="ru">С любовью, Константин и Наргиз</span>
+  <div class="trees">🎄✨🎁✨🎄</div>
+</div>
+</main>
+<script>
+// Впишите номер WhatsApp в формате 77001234567, чтобы ответы приходили вам
+var PHONE = "";
+(function(){
+  var s = document.getElementById('snow'), ch = ['❄','❅','✦','❆'];
+  for (var i = 0; i < 26; i++) {
+    var e = document.createElement('i');
+    e.textContent = ch[i % 4];
+    e.style.left = (Math.random() * 100) + '%';
+    e.style.fontSize = (10 + Math.random() * 16) + 'px';
+    e.style.animationDuration = (7 + Math.random() * 9) + 's';
+    e.style.animationDelay = (-Math.random() * 14) + 's';
+    s.appendChild(e);
+  }
+})();
+function answer(yes){
+  var t = document.getElementById('thanks');
+  var kz = yes ? "Рахмет! Сізді күтеміз 💙" : "Хабарлағаныңызға рахмет. Сағынамыз!";
+  var ru = yes ? "Спасибо! Будем ждать вас" : "Спасибо, что сообщили. Будем скучать!";
+  t.textContent = kz;
+  var r = document.createElement('span'); r.className = 'ru'; r.textContent = ru; t.appendChild(r);
+  t.style.display = 'block';
+  var msg = yes ? "Сәлеметсіз бе! Дэвидтің тойына келеміз 🎉 / Здравствуйте! Мы придём на день рождения Дэвида" : "Сәлеметсіз бе! Өкінішке қарай, Дэвидтің тойына келе алмаймыз / Здравствуйте! К сожалению, не сможем прийти на день рождения Дэвида";
+  if (PHONE) { window.open("https://wa.me/" + PHONE + "?text=" + encodeURIComponent(msg), "_blank"); }
+}
+</script>
+</body>
+</html>
